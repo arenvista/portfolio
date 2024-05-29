@@ -1,9 +1,12 @@
 import {Container, Row, Col} from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
+import meter_git from "../assets/img/meter_git.png";
+import meter_docker from "../assets/img/meter_docker.png";
+import meter_arch from "../assets/img/meter_arch.png";
+import meter_react from "../assets/img/meter_react.png";
+import meter_linux from "../assets/img/meter_linux.png";
+import meter_sqlite from "../assets/img/meter_sqlite.png";
 import colorSharp from "../assets/img/color-sharp.png";
 
 export const Skills = () => {
@@ -36,24 +39,35 @@ export const Skills = () => {
                             <h2>
                                 Skills
                             </h2>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                            <p> 
+                            <p>
+                              Explore the key technologies and tools in my portfolio below. They have been critical in building and 
+                              managing my projects, including this portfolio. These skills showcase my versatility across software 
+                              development, encompassing front-end, back-end, deployment, and hosting. For details on my scientific 
+                              computing and data analysis expertise, contact me for a deeper dive into problem-solving with science.
+                            </p>
+                            </p>
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
 
                                 <div className="item">
-                                    <img src={meter1} alt="Image" />
-                                    <h5>Web Development</h5>
+                                    <img src={meter_git} alt="Image" />
+                                    <h5>Github / Gitlabs</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={meter2} alt="Image" />
-                                    <h5>Brand Identity</h5>
+                                    <img src={meter_linux} alt="Image" />
+                                    <h5>Linux</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={meter3} alt="Image" />
-                                    <h5>Logo Design</h5>
+                                    <img src={meter_docker} alt="Image" />
+                                    <h5>Docker</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={meter1} alt="Image" />
-
+                                    <img src={meter_react} alt="Image" />
+                                    <h5>React/JS</h5>
+                                </div>
+                                <div className="item">
+                                    <img src={meter_sqlite} alt="Image" />
+                                    <h5>Sqlite3</h5>
                                 </div>
 
                             </Carousel>

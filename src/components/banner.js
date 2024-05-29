@@ -6,7 +6,7 @@ import headerImg from "../assets/img/header-img.svg";
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = [ 'web dev', 'designer', 'freelancer'];
+    const toRotate = [ 'web dev', 'biochemist', 'freelancer'];
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const period = 2000;
@@ -44,8 +44,9 @@ export const Banner = () => {
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
                         <span className="tagline">Welcome to my Portfolio</span>
-                        <h1>{`Hi I'm wecoded`}<span className="wrap">{text}</span></h1>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                        <h1>{`Hi I'm Aren, a `}<span className="wrap">{text}</span></h1>
+                        <p>I'm a computer nerd who fell into biochemistry. I've conducted research in computational biology, focusing on viral gene editing via Adeno-Associated Viruses (AAVs). Now, I'm broadening my skills to better understand the tech landscape and where my interests and abilities align. This portfolio is a place for me to highlight some of the topics I've undertaken and to be a resource for some of the tools I've found helpful.</p>
+                        <br/>
                         <button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle size={25}/></button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
