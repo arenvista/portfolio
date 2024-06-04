@@ -7,8 +7,12 @@ import colorSharp2 from '../assets/img/color-sharp2.png';
 import projImg1 from '../assets/img/project-img1.png';
 import projCses from '../assets/img/proj_cses.png';
 import projLeet from '../assets/img/proj_leetcode.png';
+import projDots from '../assets/img/proj_dots.png';
+import projFolder from '../assets/img/project-folder.png'
+import projFolder2 from '../assets/img/project-folder2.png'
 import projImg2 from '../assets/img/project-img2.png';
 import projImg3 from '../assets/img/project-img3.png';
+import logo from '../assets/img/logo.svg';
 import TrackVisibility from 'react-on-screen';
 
 import Tab from 'react-bootstrap/Tab';
@@ -35,9 +39,21 @@ export const Projects = () => {
         {
             title: "Dotfiles",
             description: "A set of bash scripts and configurations for managing my environment, with a focus on quick deployment and acess to development tools.",
-            imgUrl: projImg1,
+            imgUrl: projDots,
             linkUrl: "https://github.com/arenvista/dotfiles"
 
+        },
+        {
+            title: "Portfolio",
+            description: "A personal portfolio website built with React and Bootstrap.",
+            imgUrl: projFolder,
+            linkUrl: "https://github.com/arenvista/portfolio"
+        },
+        {
+            title: "Mini Projects",
+            description: "A collection of small projects and tools I've created to solve common problems and automate tasks.",
+            imgUrl: projFolder2,
+            linkUrl: "https://github.com/arenvista/portfolio"
         }
     ]
     return (
@@ -60,7 +76,7 @@ export const Projects = () => {
                                                 <Nav.Link eventKey="second">Personal Projects</Nav.Link>
                                             </Nav.Item>
                                             <Nav.Item>
-                                                <Nav.Link eventKey="third">Professional Projects</Nav.Link>
+                                                <Nav.Link eventKey="third">Other Resources</Nav.Link>
                                             </Nav.Item>
                                         </Nav>
 
