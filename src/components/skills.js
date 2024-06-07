@@ -7,6 +7,7 @@ import meter_arch from "../assets/img/meter_arch.png";
 import meter_react from "../assets/img/meter_react.png";
 import meter_linux from "../assets/img/meter_linux.png";
 import meter_sqlite from "../assets/img/meter_sqlite.png";
+import meter_aws from "../assets/img/meter_aws.png";
 import colorSharp from "../assets/img/color-sharp.png";
 
 export const Skills = () => {
@@ -68,6 +69,10 @@ export const Skills = () => {
                                 <div className="item">
                                     <img src={meter_sqlite} alt="Image" />
                                     <h5>Sqlite3</h5>
+                                </div>
+                                <div className="item">
+                                    <img src={meter_aws} alt="Image" />
+                                    <h5>AWS EC2</h5>
                                 </div>
 
                             </Carousel>

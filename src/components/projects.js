@@ -4,12 +4,14 @@ import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
 import colorSharp2 from '../assets/img/color-sharp2.png';
-import projImg1 from '../assets/img/project-img1.png';
 import projCses from '../assets/img/proj_cses.png';
 import projLeet from '../assets/img/proj_leetcode.png';
 import projDots from '../assets/img/proj_dots.png';
 import projFolder from '../assets/img/project-folder.png'
 import projFolder2 from '../assets/img/project-folder2.png'
+import projFolder3 from '../assets/img/project-folder3.png'
+import projFolder4 from '../assets/img/project-folder4.png'
+import projImg1 from '../assets/img/project-img1.png';
 import projImg2 from '../assets/img/project-img2.png';
 import projImg3 from '../assets/img/project-img3.png';
 import logo from '../assets/img/logo.svg';
@@ -38,22 +40,31 @@ export const Projects = () => {
     const personal = [
         {
             title: "Dotfiles",
-            description: "A set of bash scripts and configurations for managing my environment, with a focus on quick deployment and acess to development tools.",
-            imgUrl: projDots,
+            description: "A quick and easy way to set up my development environment on any machine.",
+            imgUrl: projFolder,
             linkUrl: "https://github.com/arenvista/dotfiles"
 
         },
         {
             title: "Portfolio",
             description: "A personal portfolio website built with React and Bootstrap.",
-            imgUrl: projFolder,
+            imgUrl: projFolder2,
             linkUrl: "https://github.com/arenvista/portfolio"
         },
         {
             title: "Mini Projects",
             description: "A collection of small projects and tools I've created to solve common problems and automate tasks.",
-            imgUrl: projFolder2,
-            linkUrl: "https://github.com/arenvista/portfolio"
+            imgUrl: projFolder3,
+            linkUrl: "https://github.com/arenvista/miniprojects"
+        }
+    ]
+
+    const other = [ 
+        {
+            title: "CS Notes",
+            description: "A collection of notes and resources for computer science topics. Written in obsidian/markdown.",
+            imgUrl: projFolder4,
+            linkUrl: "https://github.com/arenvista/csnotes"
         }
     ]
     return (
@@ -115,7 +126,18 @@ export const Projects = () => {
 
                                             {/* third tab pane */}
                                             <Tab.Pane eventKey="third">
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                                                <Row className="justify-content-center align-items-center">
+                                                    {
+                                                        other.map((project, index) => {
+                                                            return (
+                                                                <ProjectCard
+                                                                    key={index}
+                                                                    {...project}
+                                                                />
+                                                            )
+                                                        })
+                                                    }
+                                                </Row>
                                             </Tab.Pane>
                                         </Tab.Content>
                                     </Tab.Container>
