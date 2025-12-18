@@ -6,7 +6,7 @@ import headerImg from "../assets/img/header-img.svg";
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = [ 'web dev', 'biochemist', 'freelancer'];
+    const toRotate = [ 'mathematician', 'biochemist', 'computer scientist'];
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const period = 2000;
@@ -47,7 +47,7 @@ export const Banner = () => {
                         <h1>{`Hi I'm Aren, a `}<span className="wrap">{text}</span></h1>
                         <p>I'm a computer nerd who fell into biochemistry. I've conducted research in computational biology, focusing on viral gene editing via Adeno-Associated Viruses (AAVs). Now, I'm broadening my skills to better understand the tech landscape and where my interests and abilities align. This portfolio is a place for me to highlight some of the topics I've undertaken and to be a resource for some of the tools I've found helpful.</p>
                         <br/>
-                        <button onClick={() => document.getElementById('connect').scrollIntoView({ behavior: 'smooth'})}>Let's connect <ArrowRightCircle size={25}/></button>
+                        <button onClick={() => document.getElementById('connect').scrollIntoView({ behavior: 'smooth'})}>Get in touch <ArrowRightCircle size={25}/></button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src={headerImg} alt="Header Image" />

@@ -1,0 +1,67 @@
+/* resume-styles.css */
+
+/* Target the specific wrapper class we added in React */
+.content {
+    background-color: white !important; /* Force white background */
+    color: #333 !important;             /* Force dark text (inherited from your HTML) */
+    font-family: sans-serif;
+    line-height: 1.4;
+    padding: 40px;                      /* Add spacing like a real document */
+    min-height: 100vh;                  /* Ensure it covers the whole screen height */
+    margin: 0;
+}
+
+/* Ensure headings are dark */
+.content h1, 
+.content h2, 
+.content h3, 
+.content h4 {
+    color: #000 !important;
+    font-weight: normal;
+}
+
+/* Fix links so they aren't white-on-white */
+.content a {
+    color: #000 !important;
+    text-decoration: underline;
+}
+
+/* Add your specific resume formatting from the HTML file */
+.content h1 {
+    font-size: 2em;
+    margin-bottom: 0.2em;
+}
+
+.content h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+.content td {
+    vertical-align: top;
+    padding: 2px 0;
+    color: #333 !important; /* Force table text to be dark */
+}
+
+.right-align {
+    text-align: right;
+}
+
+.content ul {
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+.content li {
+    margin-bottom: 3px;
+    color: #333 !important;
+}
