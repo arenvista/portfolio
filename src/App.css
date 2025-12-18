@@ -1,18 +1,40 @@
+/************ Catppuccin Mocha (Grayscale Focus) Palette ************/
+:root {
+  /* The Main Backgrounds */
+  --ctp-base: #5a5d76;
+  --ctp-mantle: #1f1f2e;
+  --ctp-crust: #171725;
+  
+  /* The Grays (for cards, inputs, overlays) */
+  --ctp-surface0: #3a3b4d;
+  --ctp-surface1: #505264;
+  --ctp-surface2: #636581;
+  
+  /* Text Colors */
+  --ctp-text: #cfd3f5;
+  --ctp-subtext1: #c0c6e2;
+  --ctp-overlay0: #747788;
+  
+  /* The "Accent" Gradient (Grayscale version) */
+  /* Gradient from Overlay2 to Surface2 */
+  --ctp-gradient: linear-gradient(90.21deg, #9a9db3 -5.91%, #636581 111.58%);
+}
+
 /************ Custom Font ************/
 @font-face {
-	font-family: Centra;
-	src: url('./assets/font/CentraNo2-Bold.ttf');
-	font-weight: 700;
+  font-family: Centra;
+  src: url('./assets/font/CentraNo2-Bold.ttf');
+  font-weight: 700;
 }
 @font-face {
-	font-family: Centra;
-	src: url('./assets/font/CentraNo2-Medium.ttf');
-	font-weight: 500;
+  font-family: Centra;
+  src: url('./assets/font/CentraNo2-Medium.ttf');
+  font-weight: 500;
 }
 @font-face {
-	font-family: Centra;
-	src: url('./assets/font/CentraNo2-Book.ttf');
-	font-weight: 400;
+  font-family: Centra;
+  src: url('./assets/font/CentraNo2-Book.ttf');
+  font-weight: 400;
 }
 
 /************ Default Css ************/
@@ -31,8 +53,8 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #121212 !important;
-  color: #fff !important;
+  background-color: var(--ctp-base) !important;
+  color: var(--ctp-text) !important;
   font-family: 'Centra', sans-serif !important;
 }
 
@@ -68,19 +90,20 @@ input:focus, textarea:focus, select:focus {
 }
 
 @media (min-width:1700px) {
-	main .container {
-		max-width: 100%;
-		padding: 0 150px;
-	}
+  main .container {
+    max-width: 100%;
+    padding: 0 150px;
+  }
 }
 
 p.success {
-	color: green;
+  color: #a6e3a1; /* Catppuccin Green */
 }
 
 p.danger {
-	color: red;
+  color: #f38ba8; /* Catppuccin Red */
 }
+
 /************ Navbar Css ************/
 nav.navbar {
   padding: 18px 0;
@@ -92,14 +115,14 @@ nav.navbar {
 }
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: #121212;
+  background-color: var(--ctp-base);
 }
 nav.navbar a.navbar-brand {
-    width: 9%;
+  width: 9%;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
-  color: #fff !important;
+  color: var(--ctp-text) !important;
   letter-spacing: 0.8px;
   padding: 0 25px;
   font-size: 18px;
@@ -107,59 +130,60 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
 }
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
-    opacity: 1;
+  opacity: 1;
 }
 span.navbar-text {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .social-icon {
-    display: inline-block;
-    margin-left: 14px;
+  display: inline-block;
+  margin-left: 14px;
 }
 .social-icon a {
-    width: 42px;
-    height: 42px;
-    background: rgba(217, 217, 217, 0.1);
-    display: inline-flex;
-    border-radius: 50%;
-    margin-right: 6px;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.1);
+  display: inline-flex;
+  border-radius: 50%;
+  margin-right: 6px;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border: 1px solid var(--ctp-surface1);
 }
 .social-icon a::before {
-    content: "";
-    width: 42px;
-    height: 42px;
-    position: absolute;
-    background-color: #ffffff;
-    border-radius: 50%;
-    transform: scale(0);
-	transition: 0.3s ease-in-out;
+  content: "";
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  background-color: var(--ctp-text);
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.3s ease-in-out;
 }
 .social-icon a:hover::before {
-    transform: scale(1);
+  transform: scale(1);
 }
 .social-icon a img {
-	width: 40%;
-	z-index: 1;
-	transition: 0.3s ease-in-out;
+  width: 40%;
+  z-index: 1;
+  transition: 0.3s ease-in-out;
 }
 .social-icon a:hover img {
-	filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+    /* Filters modified to result in dark gray/black icon on white hover */
+  filter: brightness(0) saturate(100%);
 }
 .navbar-text button {
   font-weight: 700;
-  color: #fff;
-  border: 1px solid #fff;
+  color: var(--ctp-text);
+  border: 1px solid var(--ctp-text);
   padding: 18px 34px;
   font-size: 18px;
   margin-left: 18px;
-	position: relative;
-	background-color: transparent;
-	transition: 0.3s ease-in-out;
+  position: relative;
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
 }
 .navbar-text button span {
   z-index: 1;
@@ -169,85 +193,89 @@ span.navbar-text {
   width: 0%;
   height: 100%;
   position: absolute;
-  background-color: #fff;
+  background-color: var(--ctp-text);
   left: 0;
   top: 0;
   z-index: -1;
   transition: 0.3s ease-in-out;
 }
 .navbar-text button:hover {
-  color: #121212;
+  color: var(--ctp-base);
 }
 .navbar-text button:hover::before {
-	content: "";
-	width: 100%;
-	height: 100%;
-	position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 nav.navbar .navbar-toggler:active,
 nav.navbar .navbar-toggler:focus {
-	outline: none;
-    box-shadow: none;
+  outline: none;
+  box-shadow: none;
 }
 nav.navbar .navbar-toggler-icon {
   width: 24px;
   height: 17px;
   background-image: none;
   position: relative;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid var(--ctp-text);
   transition: all 300ms linear;
   top: -2px;
 }
 nav.navbar .navbar-toggler-icon:focus {
-	border-bottom: 2px solid #fff;
+  border-bottom: 2px solid var(--ctp-text);
 }
 nav.navbar .navbar-toggler-icon:after,
 nav.navbar .navbar-toggler-icon:before {
-	width: 24px;
-	position: absolute;
-	height: 2px;
-	background-color: #fff;
-	top: 0;
-	left: 0;
-	content: '';
-	z-index: 2;
-	transition: all 300ms linear;
+  width: 24px;
+  position: absolute;
+  height: 2px;
+  background-color: var(--ctp-text);
+  top: 0;
+  left: 0;
+  content: '';
+  z-index: 2;
+  transition: all 300ms linear;
 }
 nav.navbar .navbar-toggler-icon:after {
-	top: 8px;
+  top: 8px;
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
-	transform: rotate(45deg);
-	background-color: #fff;
-	height: 2px;
+  transform: rotate(45deg);
+  background-color: var(--ctp-text);
+  height: 2px;
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
-	transform: translateY(8px) rotate(-45deg);
-	background-color: #fff;
-	height: 2px;
+  transform: translateY(8px) rotate(-45deg);
+  background-color: var(--ctp-text);
+  height: 2px;
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-	border-color: transparent;
+  border-color: transparent;
 }
 
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
-  background-image: url('./assets/img/banner-bg.png');
+  /* Ensure your bg image is black and white, or use a blend mode here */
+  background-image: url('./assets/img/banner-bg.png'); 
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-blend-mode: luminosity; /* Forces BG image to grayscale */
+  background-color: var(--ctp-base);
 }
 .banner .tagline {
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;
-  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  background: linear-gradient(90.21deg, rgba(49, 50, 68, 0.5) -5.91%, rgba(49, 50, 68, 0.5) 111.58%);
   border: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 20px;
   margin-bottom: 16px;
   display: inline-block;
+  color: var(--ctp-text);
 }
 .banner h1 {
   font-size: 65px;
@@ -258,14 +286,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: block;
 }
 .banner p {
-  color: #B8B8B8;
+  color: var(--ctp-subtext1);
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 96%;
 }
 .banner button {
-  color: #fff;
+  color: var(--ctp-text);
   font-weight: 700;
   font-size: 20px;
   margin-top: 60px;
@@ -286,18 +314,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   animation: updown 3s linear infinite;
 }
 @keyframes updown {
-    0% {
-        transform: translateY(-20px);
-    }
-    50% {
-        transform: translateY(20px);
-    }
-    100% {
-        transform: translateY(-20px);
-    }
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
 }
 .txt-rotate > .wrap {
-  border-right: 0.08em solid #666;
+  border-right: 0.08em solid var(--ctp-overlay0);
 }
 
 /************ Skills Css ************/
@@ -306,22 +334,23 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
 }
 .skill-bx {
-  background: #151515;
+  background: var(--ctp-mantle);
   border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
   margin-top: -60px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 .skill h2 {
-	font-size: 45px;
-	font-weight: 700;
+  font-size: 45px;
+  font-weight: 700;
 }
 .skill p {
-    color: #B8B8B8;
-    font-size: 18px;
-    letter-spacing: 0.8px;
-    line-height: 1.5em;
-    margin: 14px 0 75px 0;
+  color: var(--ctp-subtext1);
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px 0 75px 0;
 }
 .skill-slider {
   width: 80%;
@@ -344,15 +373,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project {
   padding: 80px 0;
   position: relative;
-  background-color: black;
+  background-color: var(--ctp-crust);
 }
 .project h2 {
-	font-size: 45px;
-	font-weight: 700;
+  font-size: 45px;
+  font-weight: 700;
   text-align: center;
 }
 .project p {
-  color: #B8B8B8;
+  color: var(--ctp-subtext1);
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
@@ -364,7 +393,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 72%;
   margin: 0 auto;
   border-radius: 50px;
-  background-color: rgb(255 255 255 / 10%);
+  background-color: var(--ctp-surface0);
   overflow: hidden;
 }
 .project .nav.nav-pills .nav-item {
@@ -374,7 +403,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-color: transparent;
   border-radius: 0;
   padding: 17px 0;
-  color: #fff;
+  color: var(--ctp-text);
   width: 100%;
   font-size: 17px;
   letter-spacing: 0.8px;
@@ -385,21 +414,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: 0;
 }
 .project .nav.nav-pills .nav-link::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 100%;
-    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: var(--ctp-gradient);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
 }
 .project .nav.nav-pills .nav-link.active::before {
-    width: 100% !important;
+  width: 100% !important;
 }
 .project .nav.nav-pills .nav-link.active {
-    border: 1px solid rgba(255, 255, 255, 1);
+  border: 1px solid var(--ctp-text);
+  color: #fff;
 }
 .nav-link#projects-tabs-tab-first {
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -421,7 +451,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .proj-imgbx::before {
   content: "";
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  /* Replaced pink gradient with a dark gray transparent overlay */
+  background: linear-gradient(90.21deg, rgba(30, 30, 46, 0.9) -5.91%, rgba(69, 71, 90, 0.9) 111.58%);
   opacity: 0.85;
   position: absolute;
   width: 100%;
@@ -450,12 +481,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1.1em;
+  color: #fff;
 }
 .proj-txtx span {
   font-style: italic;
   font-weight: 400;
   font-size: 15px;
   letter-spacing: 0.8px;
+  color: var(--ctp-subtext1);
 }
 .background-image-right {
   top: 20%;
@@ -466,25 +499,26 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-/************ Projects Css ************/
+/************ Contact Css ************/
 .contact {
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  /* Dark gray gradient */
+  background: linear-gradient(90.21deg, var(--ctp-mantle) -5.91%, var(--ctp-crust) 111.58%);
   padding: 60px 0 200px 0;
 }
 .contact img {
   width: 92%;
 }
 .contact h2 {
-	font-size: 45px;
-	font-weight: 700;
+  font-size: 45px;
+  font-weight: 700;
   margin-bottom: 30px;
 }
 .contact form input, .contact form textarea {
   width: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--ctp-surface2);
   border-radius: 20px;
-  color: #fff;
+  color: var(--ctp-text);
   margin: 0 0 8px 0;
   padding: 18px 26px;
   font-weight: 500;
@@ -493,22 +527,23 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: 0.3s ease-in-out;
 }
 .contact form input:focus, .contact form textarea:focus {
-  background: rgba(255, 255, 255, 1);
-  color: #121212;
+  background: var(--ctp-surface0);
+  color: var(--ctp-text);
+  border-color: var(--ctp-text);
 }
 .contact form input::placeholder, .contact form textarea::placeholder {
   font-size: 16px;
   font-weight: 400;
-  color: #fff;
+  color: var(--ctp-overlay0);
 }
 .contact form input:focus::placeholder, .contact form textarea:focus::placeholder {
-  color: #121212;
+  color: var(--ctp-text);
   opacity: 0.8;
 }
 .contact form button {
   font-weight: 700;
-  color: #000;
-  background-color: #fff;
+  color: var(--ctp-base);
+  background-color: var(--ctp-text);
   padding: 14px 48px;
   font-size: 18px;
   margin-top: 25px;
@@ -521,11 +556,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
 }
 .contact form button:hover {
-  color: #fff;
+  color: var(--ctp-text);
 }
 .contact form button::before {
   content: "";
-  background: #121212;
+  background: var(--ctp-surface1);
   width: 0;
   height: 100%;
   position: absolute;
@@ -545,14 +580,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: var(--ctp-base);
+  background-blend-mode: luminosity;
 }
 .newsletter-bx {
-  background: #FFFFFF;
+  background: var(--ctp-surface0);
   border-radius: 55px;
-  color: #121212;
+  color: var(--ctp-text);
   padding: 85px 125px;
   margin-bottom: 80px;
   margin-top: -122px;
+  border: 1px solid var(--ctp-surface2);
 }
 .newsletter-bx h3 {
   font-weight: 700;
@@ -560,7 +598,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.2em;
 }
 .new-email-bx {
-  background: #fff;
+  background: var(--ctp-base);
   padding: 5px;
   border-radius: 20px;
   position: relative;
@@ -570,7 +608,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .new-email-bx::before {
   content: "";
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background: var(--ctp-gradient);
   border-radius: 20px;
   position: absolute;
   z-index: -1;
@@ -581,7 +619,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .new-email-bx::after {
   content: "";
-  background: #fff;
+  background: var(--ctp-base);
   border-radius: 20px;
   position: absolute;
   z-index: -1;
@@ -592,14 +630,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .new-email-bx input {
   width: 100%;
-  color: #121212;
+  color: var(--ctp-text);
   font-weight: 500;
   background: transparent;
   border: 0;
   padding: 0 15px;
 }
 .new-email-bx button {
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background: var(--ctp-gradient);
   padding: 20px 65px;
   color: #fff;
   font-weight: 500;
@@ -612,7 +650,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .footer p {
   font-weight: 400;
   font-size: 14px;
-  color: #B8B8B8;
+  color: var(--ctp-subtext1);
   letter-spacing: 0.5px;
   margin-top: 20px;
 }

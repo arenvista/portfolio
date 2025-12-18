@@ -11,9 +11,6 @@ import projFolder from '../assets/img/project-folder.png'
 import projFolder2 from '../assets/img/project-folder2.png'
 import projFolder3 from '../assets/img/project-folder3.png'
 import projFolder4 from '../assets/img/project-folder4.png'
-import projImg1 from '../assets/img/project-img1.png';
-import projImg2 from '../assets/img/project-img2.png';
-import projImg3 from '../assets/img/project-img3.png';
 import logo from '../assets/img/logo.svg';
 import TrackVisibility from 'react-on-screen';
 
