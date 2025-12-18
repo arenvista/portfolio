@@ -505,8 +505,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: linear-gradient(90.21deg, var(--ctp-mantle) -5.91%, var(--ctp-crust) 111.58%);
   padding: 60px 0 200px 0;
 }
+
 .contact img {
-  width: 92%;
+  width: 72%;
+  animation: updown 3s linear infinite;
 }
 .contact h2 {
   font-size: 45px;

@@ -47,6 +47,7 @@ export const Banner = () => {
                         <span className="tagline">Welcome to my Portfolio</span>
                         <h1>{`Hi I'm Aren, a `}<span className="wrap">{text}</span></h1>
                         <p>I'm a computer nerd who fell into biochemistry. I've conducted research in computational biology, focusing on viral gene editing via Adeno-Associated Viruses (AAVs). Now, I'm broadening my skills to better understand the tech landscape and where my interests and abilities align. This portfolio is a place for me to highlight some of the topics I've undertaken and to be a resource for some of the tools I've found helpful.</p>
+                        <p><em>Will work for chalk and coffee.</em></p>
                         <br/>
                         <button onClick={() => document.getElementById('connect').scrollIntoView({ behavior: 'smooth'})}>Get in touch <ArrowRightCircle size={25}/></button>
                     </Col>
