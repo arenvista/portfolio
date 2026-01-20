@@ -45,18 +45,17 @@ export const Resume = () => {
       <div id="experience" className="outline-2">
         <h2>Experience</h2>
         <div className="outline-text-2">
-
           <table>
             <tbody>
               <tr>
                 <td>Undergraduate Researcher: Mathematics</td>
                 <td className="right-align">December 2025 - Present</td>
               </tr>
-              <tr><td className="left-align">Bedrich Sousedik: University of Maryland, Baltimore County</td></tr>
+              <tr><td className="left-align">Steven Freeland: University of Maryland, Baltimore County</td></tr>
               <tr>
                 <td colSpan="3">
                   <ul>
-                    <li>Research on optimized betting strategies using MCMC</li>
+                    <li>Classification of non-canonical amino acids</li>
                   </ul>
                 </td>
               </tr>
